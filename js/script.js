@@ -14,15 +14,15 @@ document.getElementById("collaborator-name").innerHTML = "Tiancheng Jiao";
 document.querySelector("#instruction_button").addEventListener("click", hide);
 function hide(){
     button_text = document.getElementById("instruction_button").innerHTML;
-    instruction_arr = document.querySelectorAll('.question');
+    instructions = document.querySelectorAll('.question');
     if (button_text === "Hide Instructions"){
-        for (let i = 0; i < instruction_arr.length;i++) {
-            instruction_arr[i].style.display = "none";
+        for (let question of instructions) {
+            question.style.display = "none";
         }
         this.innerHTML = "Show Instructions";
-    } else if (button_text === "Show Instructions") {
-        for (let i = 0; i < instructions_arr.length; i++){
-            instruction_arr[i].style.display = "block";
+    } else {
+        for (let question of instructions){
+            question.style.display = "block";
         }
         this.innerHTML = "Hide Instructions";
     }
