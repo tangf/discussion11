@@ -5,10 +5,29 @@ let pokemonList = ["Bulbasaur","Ivysaur","Venusaur","Charmander","Charmeleon","C
 // Question 1
 
 
-
+document.getElementById("host-name").innerHTML = "Faith Tang";
+document.getElementById("collaborator-name").innerHTML = "Tiancheng Jiao";
 
 // Question 2
 // You can also create their own CSS classes in style.css file and use that. 
+
+document.querySelector("#instruction_button").addEventListener("click", hide);
+function hide(){
+    button_text = document.getElementById("instruction_button").innerHTML;
+    instruction_arr = document.querySelectorAll('.question');
+    if (button_text === "Hide Instructions"){
+        for (let i = 0; i < instruction_arr.length;i++) {
+            instruction_arr[i].style.display = "none";
+        }
+        this.innerHTML = "Show Instructions";
+    } else if (button_text === "Show Instructions") {
+        for (let i = 0; i < instructions_arr.length; i++){
+            instruction_arr[i].style.display = "block";
+        }
+        this.innerHTML = "Hide Instructions";
+    }
+    
+}
 
 
 
@@ -16,6 +35,16 @@ let pokemonList = ["Bulbasaur","Ivysaur","Venusaur","Charmander","Charmeleon","C
 // Question 3
 // Try change event first
 // There is another event which fires for every character. This is what we want to use.
+
+function fill_name(){
+    var fn = document.getElementById("first_name").innerHTML;
+    if(fn === "John"){
+        document.getElementById("")
+    }
+}
+
+
+document.getElementById("first_name").addEventListener("input",fill_name);
 
 
 
